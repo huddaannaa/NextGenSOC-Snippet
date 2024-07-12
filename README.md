@@ -1,4 +1,4 @@
-# Security Operations Center (SOC) Architecture Documentation
+# NxtGen- Security Operations Center (SOC) Architecture Documentation (Snippet)
 
 ## Overview
 
