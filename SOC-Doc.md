@@ -363,13 +363,3 @@ The NxtGen SOC architecture integrates various components to provide comprehensi
 - Plan for ensuring that essential SOC functions can continue during a disruption.
 - Identification of critical functions and resources.
 
-## Appendices
-
-### Glossary of Terms
-- Definitions of key terms and acronyms used in the SOC documentation.
-
-### Contact Lists
-- List of key contacts within the SOC and other relevant teams.
-
-### Reference Documents
-- Links to reference documents and resources, such as regulatory guidelines and best practice frameworks.
