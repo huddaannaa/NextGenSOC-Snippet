@@ -4,6 +4,8 @@
 
 This document provides a detailed technical description of the architecture and data flow for a Security Operations Center (SOC) system. The architecture integrates various components for threat intelligence, data ingestion, data processing, enrichment, analysis, and response. The SOC leverages multiple tools and technologies to provide comprehensive security monitoring and response capabilities.
 
+![diagram](https://github.com/huddaannaa/NextGenSOC-Snippet/blob/f95397be5c0219ec1df7b60288d7cfec7bd9f441/SOC-v10.png)
+
 ## Components and Data Flow
 
 ### Endpoints
@@ -144,33 +146,7 @@ This document provides a detailed technical description of the architecture and 
 - **Data Flow:** Provides insights and results back to the SOC for further action.
 - **Importance:** Results inform continuous improvement efforts, helping the SOC to refine its processes and enhance its capabilities.
 
-## Data Flow Summary
-
-```mermaid
-graph TD
-    A[Endpoints] -->|Log Data| B[Log Agents/Shipper]
-    B -->|Log Data| C[Broker]
-    D[Data Sources] -->|Log Data| E[Log Receiver]
-    E -->|Filtered Log Data| C
-    C -->|Categorized Log Data| F[Topics]
-    F -->|Processed Data| G[Data Pipelines]
-    G -->|Processed and Enriched Data| H[Data Processor]
-    H -->|Enriched Data| I[Threat Intelligence Cache]
-    I -->|Enriched Data| J[Ingest Node]
-    J -->|Indexed Data| K[Index Cluster]
-    K -->|Stored Data| L[HDFS]
-    J -->|Indexed Data| M[Frontend]
-    M -->|Data Visualization| N[Data Explorer Module]
-    M -->|Alerts| O[Alerting Module]
-    O -->|Alerts| P[SOAR]
-    P -->|Actions|
-
- Q[Integrations]
-    Q -->|Response Actions| R[Actions]
-    P -->|Lessons Learned| S[Intelligence Repository]
-```
-
-### Flow Description
+## Data Flow Description
 
 - Endpoints generate logs and ship them via log agents to a topic on the broker.
 - The log receiver receives logs from data sources like network traffic, proxy, LB, AV, etc., and sends them to a topic on the broker.
