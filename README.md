@@ -1,0 +1,1 @@
+# NextGenSOC-Snippet
