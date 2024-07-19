@@ -1,4 +1,4 @@
-488896# SOC Operations: A Comprehensive Training Guide
+# SOC Operations: A Comprehensive Training Guide
 
 ## Description
 
